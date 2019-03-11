@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="Css/tictactoe.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <script src="script/GameOfTheYear.js"></script>
+  </head>
+
+  <body onload="gamePlay()">
+    <div class="center">
+      <h1 id="gameTitle">Tic Tac Toe 3 In A Row</h1>
+    </div>
+    <div class="gameMessage" id="message">Start Game</div>
+    <br>
+    <div class="centerTable">
+      <table id="table1" class="board">
+        <tbody>
+          <tr>
+            <td id="A1" onclick="nextMove(this)" class="sections"></td>
+            <td id="A2" onclick="nextMove(this)" class="sections"></td>
+            <td id="A3" onclick="nextMove(this)" class="sections"></td>
+          </tr>
+          <tr>
+            <td id="B1" onclick="nextMove(this)" class="sections"></td>
+            <td id="B2" onclick="nextMove(this)" class="sections"></td>
+            <td id="B3" onclick="nextMove(this)" class="sections"></td>
+          </tr>
+          <tr>
+            <td id="C1" onclick="nextMove(this)" class="sections"></td>
+            <td id="C2" onclick="nextMove(this)" class="sections"></td>
+            <td id="C3" onclick="nextMove(this)" class="sections"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
