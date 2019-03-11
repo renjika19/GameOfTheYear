@@ -5,16 +5,26 @@ function gamePlay() {
 }
 
 
+function playerMessage() {
+  document.getElementById("message").innerHTML = document.playersTurn + "'s Turn";
+}
+
 function nextMove(sections) {
-  sections.innerText = document.playersTurn;
-  let winner = getWinner(document.playersTurn); 
-  changePlayer();
-  alertPlayer(winner);
+  if(sections.innerText == "") {
+    sections.innerText = document.playersTurn;
+    let winner = getWinner(document.playersTurn); 
+    alertPlayer(winner);
+    changePlayer();
+    } else if(sections.innerText === "X" || sections.innerText === "O"){
+      playerMessage()
+      document.getElementById("message").innerHTML = "Choose Another Square";
+  }
 }
 
 function alertPlayer(winner) {
   if (winner) {
-    ("Winner Winner Chicken Dinner")
+    alert("Winner Winner Chicken Dinner")
+      location.reload();
   }
 }
 
@@ -23,8 +33,8 @@ function changePlayer() {
     document.playersTurn = "O";
   }  else {
       document.playersTurn = "X";
-  }
-  document.getElementById("message").innerHTML = document.playersTurn + "'s Turn";
+  } 
+  playerMessage();
 }
 
 function getWinner(playersTurn) {
