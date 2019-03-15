@@ -1,5 +1,5 @@
 .page {
-  background-color: cornflowerblue;
+  background-image: url("images/gameroom.jpg")
 }
 
 .board {
@@ -68,4 +68,20 @@ td {
 
 .centerTable{
   width: 100%;
+
 }
+
+.resetDiv {
+  text-align: center;
+}
+
+.resetButton {
+  margin-top: 27px;
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+  color: rgb(9, 9, 105);
+  background-color: lavender;(100, 99, 26);
+  font-size: 30px;
+}
+

@@ -1,5 +1,3 @@
-const test = document;
-
 function gamePlay() {
   document.playersTurn = "X";
 }
@@ -18,13 +16,12 @@ function nextMove(sections) {
     } else if(sections.innerText === "X" || sections.innerText === "O"){
       playerMessage()
       document.getElementById("message").innerHTML = "Choose Another Square";
+    } 
   }
-}
 
 function alertPlayer(winner) {
   if (winner) {
-    alert("Winner Winner Chicken Dinner")
-      location.reload();
+    document.getElementById("message").innerHTML = ("Winner Winner Chicken Dinner")
   }
 }
 
@@ -33,19 +30,22 @@ function changePlayer() {
     document.playersTurn = "O";
   }  else {
       document.playersTurn = "X";
-  } 
-  playerMessage();
+  }
 }
 
 function getWinner(playersTurn) {
-  if(test.getElementById("A1").innerText === playersTurn && test.getElementById("B2").innerText === playersTurn && test.getElementById("C3").innerText === playersTurn)return true;
-  else if(test.getElementById("A1").innerText === playersTurn && test.getElementById("A2").innerText === playersTurn && test.getElementById("A3").innerText === playersTurn)return true;
-  else if(test.getElementById("A1").innerText === playersTurn && test.getElementById("B1").innerText === playersTurn && test.getElementById("C1").innerText === playersTurn)return true;
-  else if(test.getElementById("A2").innerText === playersTurn && test.getElementById("B2").innerText === playersTurn && test.getElementById("C2").innerText === playersTurn)return true;
-  else if(test.getElementById("A3").innerText === playersTurn && test.getElementById("B3").innerText === playersTurn && test.getElementById("C3").innerText === playersTurn)return true;
-  else if(test.getElementById("B1").innerText === playersTurn && test.getElementById("B2").innerText === playersTurn && test.getElementById("B3").innerText === playersTurn)return true;
-  else if(test.getElementById("A2").innerText === playersTurn && test.getElementById("B2").innerText === playersTurn && test.getElementById("C1").innerText === playersTurn)return true;
-  else if(test.getElementById("C1").innerText === playersTurn && test.getElementById("C2").innerText === playersTurn && test.getElementById("C3").innerText === playersTurn)return true;
+  if(document.getElementById("A1").innerText === playersTurn && document.getElementById("B2").innerText === playersTurn && document.getElementById("C3").innerText === playersTurn)return true;
+  else if(document.getElementById("A1").innerText === playersTurn && document.getElementById("A2").innerText === playersTurn && document.getElementById("A3").innerText === playersTurn)return true;
+  else if(document.getElementById("A1").innerText === playersTurn && document.getElementById("B1").innerText === playersTurn && document.getElementById("C1").innerText === playersTurn)return true;
+  else if(document.getElementById("A2").innerText === playersTurn && document.getElementById("B2").innerText === playersTurn && document.getElementById("C2").innerText === playersTurn)return true;
+  else if(document.getElementById("A3").innerText === playersTurn && document.getElementById("B3").innerText === playersTurn && document.getElementById("C3").innerText === playersTurn)return true;
+  else if(document.getElementById("B1").innerText === playersTurn && document.getElementById("B2").innerText === playersTurn && document.getElementById("B3").innerText === playersTurn)return true;
+  else if(document.getElementById("A2").innerText === playersTurn && document.getElementById("B2").innerText === playersTurn && document.getElementById("C1").innerText === playersTurn)return true;
+  else if(document.getElementById("C1").innerText === playersTurn && document.getElementById("C2").innerText === playersTurn && document.getElementById("C3").innerText === playersTurn)return true;
   return false;
-  
+
+}
+
+function myButton() {
+  location.reload();
 }
