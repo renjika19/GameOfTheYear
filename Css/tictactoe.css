@@ -20,7 +20,7 @@
   border-style: solid;
   background-color: lavender;
   border-color: black;
-
+  text-align: center;
 }
 
 .gameMessage {
@@ -28,12 +28,13 @@
   font-style: italic;
   font-family: 'Amatic SC', cursive;
   font-style: bold;
-  margin-left: 17%;
+  text-align: center;
   font-weight: bold;
   border-style: solid;
   border-color: black;
-  margin-right: 1250px;
   background-color: lavender;
+  margin-left: 700px;
+  margin-right: 700px;
 }
 
 .boardwidth {
@@ -56,6 +57,7 @@ td {
   font-size: 50px;
   margin-top: 15px;
   margin: center;
+  text-align: center;
 }
 
 .playerButtonsInline {
@@ -81,7 +83,7 @@ td {
   width: 200px;
   height: 100px;
   color: rgb(9, 9, 105);
-  background-color: lavender;(100, 99, 26);
+  background-color: lavender;
   font-size: 30px;
 }
 
