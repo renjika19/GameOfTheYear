@@ -19,6 +19,13 @@
   text-align: center;
 }
 
+.gameMessageDiv {
+  text-align: center;
+  border-style: solid;
+  border-color: black;
+  background-color: lavender;
+}
+
 .gameMessage {
   font-size: 45px;
   font-style: italic;
@@ -85,4 +92,35 @@ td {
   background-color: lavender;
   font-size: 30px;
 }
+
+#xWin {
+  text-align: left;
+  font-family: 'VT323', monospace;
+  font-size: 80px;
+}
+
+#oWin {
+  text-align: right;
+  font-family: 'VT323', monospace;
+  font-size: 80px;
+}
+
+#winnerMessage {
+  animation:blinkingText 1.5s infinite;
+  text-align: center;
+  font-size: 50px;
+  color: green;
+}
+
+@keyframes blinkingText {
+  0%{opacity: 0;}
+  16.66%{opacity: .16;}
+  33.33%{opacity: .33%}
+  50%{opacity: .5;}
+  66%{opacity: .66;}
+  83.33%{opacity: .83;}
+  100%{opacity: 1;}
+}
+
+
 

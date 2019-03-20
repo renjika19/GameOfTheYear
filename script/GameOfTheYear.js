@@ -1,8 +1,17 @@
 var count = 0
 var winnerCount = {x:0, o:0}
+// document.getElementById("myBtn").addEventListener("click", myFunction);
+// var x = document.getElementById("startOver");
+// if (x.addEventListener) {                    // For all major browsers, except IE 8 and earlier
+//   x.addEventListener("click", restart);
+// } else if (x.attachEvent) {                  // For IE 8 and earlier versions
+//   x.attachEvent("onclick", restart);
+// }
+
 
 function gamePlay() {
   document.playersTurn = "X";
+  document.getElementById("startOver").addEventListener("click", restart);
 }
 
 function playerWinCount(playerThatWon) {
@@ -25,6 +34,7 @@ function nextMove(sections) {
     sections.innerHTML = document.playersTurn;
     let winner = getWinner(document.playersTurn); 
     alertPlayer(winner);
+    debugger
     changePlayer();
     playerMessage();
     count++
@@ -39,7 +49,7 @@ function nextMove(sections) {
 
 function alertPlayer(winner) {
   if (winner) {
-    document.getElementById("message").innerHTML = ("Winner Winner Chicken Dinner");
+    document.getElementById("winnerMessage").innerHTML = ("Winner Winner Chicken Dinner");
     playerWinCount(document.playersTurn)
   }
 }
@@ -48,10 +58,10 @@ function restart() {
   var td = document.getElementsByTagName("td");
   for(let i = 0; i < td.length; i++) {
     td[i].innerHTML = "";
-    document.getElementById("message").innerHTML = document.playersTurn + "'s To Start Game";
+    document.getElementById("message").innerHTML = document.playersTurn + "'s To Start Game"
+    document.getElementById("winnerMessage").innerHTML = "";
     count = 0;
     gamePlay();
-    
   }
 }
 

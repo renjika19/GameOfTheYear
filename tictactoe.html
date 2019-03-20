@@ -3,6 +3,7 @@
 
   <head>
     <link rel="stylesheet" href="Css/tictactoe.css"/>
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
     <script src="script/GameOfTheYear.js"></script>
   </head>
@@ -15,13 +16,16 @@
         </h1>
         <div id="oWin"></div> 
       </div>
-      <div class="gameMessage" id="message">X's To Start Game</div>
+      <div id="winnerMessage"></div>
+      <div>
+      <h3 class="gameMessage" id="message">X's To Start Game</h3>
+      </div>
       <br>
       <div class="centerTable">
         <table id="table1" class="board">
           <tbody>
             <tr>
-              <td id="A1" onclick="nextMove(this)" class="sections"></td>
+              <td id="A1"  onclick="nextMove(this)" class="sections"></td>
               <td id="A2" onclick="nextMove(this)" class="sections"></td>
               <td id="A3" onclick="nextMove(this)" class="sections"></td>
             </tr>
@@ -39,7 +43,10 @@
         </table>
       </div>
       <div class="resetDiv">
-        <button class="resetButton" onclick="restart()">Play Again</button>
+        <button class="resetButton" id="startOver">Play Again</button>
+      </div>
+      <div>
+        <button 
       </div>
   </body>
 </html>
