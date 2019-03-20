@@ -1,12 +1,5 @@
 var count = 0
 var winnerCount = {x:0, o:0}
-// document.getElementById("myBtn").addEventListener("click", myFunction);
-// var x = document.getElementById("startOver");
-// if (x.addEventListener) {                    // For all major browsers, except IE 8 and earlier
-//   x.addEventListener("click", restart);
-// } else if (x.attachEvent) {                  // For IE 8 and earlier versions
-//   x.attachEvent("onclick", restart);
-// }
 
 
 function gamePlay() {
@@ -29,19 +22,18 @@ function playerMessage() {
   document.getElementById("message").innerHTML = document.playersTurn + "'s Turn";
 }
 
-function nextMove(sections) {
+function users(sections) {
   if(sections.innerHTML == "") {
     sections.innerHTML = document.playersTurn;
     let winner = getWinner(document.playersTurn); 
     alertPlayer(winner);
-    debugger
     changePlayer();
     playerMessage();
     count++
     if(count === 9) {
       document.getElementById("message").innerHTML = ("DRAW")
     }
-  } else if(sections.innerText === "X" || sections.innerText === "O"){
+  } else if(sections.innerHTML === "X" || sections.innerHTML === "O"){
     playerMessage()
     document.getElementById("message").innerHTML = "Choose Another Square";
   } 
@@ -65,19 +57,20 @@ function restart() {
   }
 }
 
+
 function changePlayer() {
   document.playersTurn = (document.playersTurn=="X")?"O":"X";
 }
 
 function getWinner(playersTurn) {
-  if(document.getElementById("A1").innerText === playersTurn && document.getElementById("B2").innerText === playersTurn && document.getElementById("C3").innerText === playersTurn)return true;
-  else if(document.getElementById("A1").innerText === playersTurn && document.getElementById("A2").innerText === playersTurn && document.getElementById("A3").innerText === playersTurn)return true;
-  else if(document.getElementById("A1").innerText === playersTurn && document.getElementById("B1").innerText === playersTurn && document.getElementById("C1").innerText === playersTurn)return true;
-  else if(document.getElementById("A2").innerText === playersTurn && document.getElementById("B2").innerText === playersTurn && document.getElementById("C2").innerText === playersTurn)return true;
-  else if(document.getElementById("A3").innerText === playersTurn && document.getElementById("B3").innerText === playersTurn && document.getElementById("C3").innerText === playersTurn)return true;
-  else if(document.getElementById("B1").innerText === playersTurn && document.getElementById("B2").innerText === playersTurn && document.getElementById("B3").innerText === playersTurn)return true;
-  else if(document.getElementById("A2").innerText === playersTurn && document.getElementById("B2").innerText === playersTurn && document.getElementById("C2").innerText === playersTurn)return true;
-  else if(document.getElementById("C1").innerText === playersTurn && document.getElementById("C2").innerText === playersTurn && document.getElementById("C3").innerText === playersTurn)return true;
+  if(document.getElementById("A1").innerHTML === playersTurn && document.getElementById("B2").innerHTML === playersTurn && document.getElementById("C3").innerHTML === playersTurn)return true;
+  else if(document.getElementById("A1").innerHTML === playersTurn && document.getElementById("A2").innerHTML === playersTurn && document.getElementById("A3").innerHTML === playersTurn)return true;
+  else if(document.getElementById("A1").innerHTML === playersTurn && document.getElementById("B1").innerHTML === playersTurn && document.getElementById("C1").innerHTML === playersTurn)return true;
+  else if(document.getElementById("A2").innerHTML === playersTurn && document.getElementById("B2").innerHTML === playersTurn && document.getElementById("C2").innerHTML === playersTurn)return true;
+  else if(document.getElementById("A3").innerHTML === playersTurn && document.getElementById("B3").innerHTML === playersTurn && document.getElementById("C3").innerHTML === playersTurn)return true;
+  else if(document.getElementById("B1").innerHTML === playersTurn && document.getElementById("B2").innerHTML === playersTurn && document.getElementById("B3").innerHTML === playersTurn)return true;
+  else if(document.getElementById("A2").innerHTML === playersTurn && document.getElementById("B2").innerHTML === playersTurn && document.getElementById("C2").innerHTML === playersTurn)return true;
+  else if(document.getElementById("C1").innerHTML === playersTurn && document.getElementById("C2").innerHTML === playersTurn && document.getElementById("C3").innerHTML === playersTurn)return true;
   return false;
 
 }
