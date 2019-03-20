@@ -17,10 +17,6 @@
   font-style: italic;
   font-family: 'Amatic SC', cursive;
   text-align: center;
-  border-style: solid;
-  background-color: lavender;
-  border-color: black;
-  text-align: center;
 }
 
 .gameMessage {
@@ -64,8 +60,11 @@ td {
   margin-left: 700px;
 }
 
-.center {
+.heading {
   text-align: center;
+  border-style: solid;
+  background-color: lavender;
+  border-color: black;
 }
 
 .centerTable{
